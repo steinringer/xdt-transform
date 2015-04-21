@@ -1,0 +1,27 @@
+{
+  "name": "xdt-transform",
+  "version": "1.0.0",
+  "description": "Node.js module to transform XML files using XDT",
+  "main": "xdt-transform.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcsdodo/xdt-transform"
+  },
+  "keywords": [
+    "XML",
+    "XDT",
+    "ctt.exe"
+  ],
+  "author": "Jozef Lacny",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mcsdodo/xdt-transform/issues"
+  },
+  "homepage": "https://github.com/mcsdodo/xdt-transform"
+}

@@ -2,7 +2,7 @@
 
 var path = require('path'),
     exec = require('child_process').exec;
-var ctt = 'bin/ctt.exe';
+var cttExe = 'bin/ctt.exe';
 
 var XdtTransform = function () { };
 
@@ -15,12 +15,12 @@ XdtTransform.prototype.transform = function (source, transform, destination) {
     /// <param name="destination">path where output file should be written (can be the same as source)</param>
     /// <example> transform('[path-to-somewhere]\Web.config', '[path-to-somewhere]\Web.Transform.config', '[path-to-somewhere]\Web.config');</example>
     
-    ctt = path.join(__dirname, ctt);
+    var cttPath = path.join(__dirname, cttExe);
     
     var s = '"s:##"'.replace("##", source);
     var t = '"t:##"'.replace("##", transform);
     var d = '"d:##"'.replace("##", destination);
-    var args = [ctt, s, t, d, "pw"];
+    var args = [cttPath, s, t, d, "pw"];
     console.log(args.join(" "));
     
     exec(args.join(" "), function (error, stdout, stderr) {

@@ -16,6 +16,7 @@ XdtTransform.prototype.transform = function (source, transform, destination) {
     /// <example> transform('[path-to-somewhere]\Web.config', '[path-to-somewhere]\Web.Transform.config', '[path-to-somewhere]\Web.config');</example>
     
     var cttPath = path.join(__dirname, cttExe);
+    cttPath = '"' + cttPath + '"';
     
     var s = '"s:##"'.replace("##", source);
     var t = '"t:##"'.replace("##", transform);

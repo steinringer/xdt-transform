@@ -10,3 +10,8 @@ transformer.transform('[path-to-somewhere]\Web.config',
     '[path-to-somewhere]\Web.Transform.config', 
     '[path-to-somewhere]\Web.config');
 ```
+
+
+## Options
+
+*  quiet: set to `true` to hide the command line.

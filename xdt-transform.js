@@ -25,7 +25,7 @@ XdtTransform.prototype.transform = function (source, transform, destination, opt
     var t = '"t:##"'.replace("##", transform);
     var d = '"d:##"'.replace("##", destination);
     var args = [cttPath, s, t, d, "pw"];
-    if (options.quiet) {
+    if (!options.quiet) {
         console.log(args.join(" "));
     }
     

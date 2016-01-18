@@ -6,7 +6,7 @@ var cttExe = 'bin/ctt.exe';
 
 var XdtTransform = function () { };
 
-XdtTransform.prototype.transform = function (source, transform, destination, options) {
+XdtTransform.prototype.transform = function (source, transform, destination, options, callback) {
     /// <summary>
     /// Transforms XML using XDT transformation (ctt.exe is used)
     /// </summary>
@@ -17,6 +17,7 @@ XdtTransform.prototype.transform = function (source, transform, destination, opt
     /// <example> transform('[path-to-somewhere]\Web.config', '[path-to-somewhere]\Web.Transform.config', '[path-to-somewhere]\Web.config');</example>
     
     options = options || {};
+    callback = callback || function () { };
     
     var cttPath = path.join(__dirname, cttExe);
     cttPath = '"' + cttPath + '"';
@@ -30,7 +31,11 @@ XdtTransform.prototype.transform = function (source, transform, destination, opt
     }
     
     exec(args.join(" "), function (error, stdout, stderr) {
-        if (error) console.log(error);
+        if (error) {
+            console.log(error);
+        } else {
+            callback();
+        }
     });
 }
 

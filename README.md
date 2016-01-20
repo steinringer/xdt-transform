@@ -8,7 +8,13 @@ var T = require('xdt-transform');
 var transformer = new T();
 transformer.transform('[path-to-somewhere]\Web.config', 
     '[path-to-somewhere]\Web.Transform.config', 
-    '[path-to-somewhere]\Web.config');
+    '[path-to-somewhere]\Web.config',
+    {
+        quiet: true
+    }, 
+    function() {
+        console.log("Hello I'm a callback function!");
+    });
 ```
 
 

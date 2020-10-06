@@ -1,6 +1,6 @@
 {
   "name": "xdt-transform",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Node.js module to transform XML files using XDT",
   "main": "xdt-transform.js",
   "directories": {
